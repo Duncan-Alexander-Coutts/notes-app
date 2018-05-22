@@ -3,12 +3,11 @@ import { connect } from "react-redux";
 import { updateNoteText } from "../actions/notes-actions";
 import NoteEditor from "../components/NoteEditor";
 import { withRouter } from "react-router";
+import { findNoteById } from "../helper/notes-helper";
 
 const NoteEditorContainer = props => {
   function getSelectedNote() {
-    return props.notes.items.find(
-      note => note.id === parseInt(props.match.params.id, 10)
-    );
+    return findNoteById(props.notes.items, parseInt(props.match.params.id, 10));
   }
 
   return (

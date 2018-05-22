@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addNote } from "../actions/notes-actions";
 import NotesList from "../components/NotesList";
 import { withRouter } from "react-router";
 
@@ -19,10 +18,4 @@ const mapStateToProps = state => ({
   notes: state.notes
 });
 
-const mapDispatchToProps = dispatch => ({
-  addNote: () => dispatch(addNote())
-});
-
-export default withRouter(
-  connect(mapStateToProps, mapDispatchToProps)(NotesListContainer)
-);
+export default withRouter(connect(mapStateToProps)(NotesListContainer));
