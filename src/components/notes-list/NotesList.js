@@ -1,7 +1,8 @@
 import React from "react";
+import "./NotesList.css";
 import { List } from "semantic-ui-react";
 import NoteListItem from "./NoteListItem";
-import { sortByDateDescending } from "../helper/notes-helper";
+import { sortByDateDescending } from "../../helper/notes-helper";
 
 export default function NotesList(props) {
   return (

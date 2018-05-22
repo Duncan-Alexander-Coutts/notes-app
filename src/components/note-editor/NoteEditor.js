@@ -1,6 +1,10 @@
 import React from "react";
+import "./NoteEditor.css";
 import { Label, Form, TextArea } from "semantic-ui-react";
-import { formatToDateString, formatToTimeString } from "../helper/date-helper";
+import {
+  formatToDateString,
+  formatToTimeString
+} from "../../helper/date-helper";
 
 export default class NoteEditor extends React.Component {
   setTextAreaRef = textArea => {

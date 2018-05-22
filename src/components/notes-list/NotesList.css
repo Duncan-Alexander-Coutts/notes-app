@@ -1,0 +1,13 @@
+.notes-list {
+  flex-grow: 1;
+  overflow-x: hidden;
+  max-width: 300px;
+
+  border-right: 1px solid #dededf;
+}
+
+.notes-list .header {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

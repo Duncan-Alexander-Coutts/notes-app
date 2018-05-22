@@ -1,7 +1,10 @@
 import React from "react";
 import { List } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-import { formatToDateString, formatToTimeString } from "../helper/date-helper";
+import {
+  formatToDateString,
+  formatToTimeString
+} from "../../helper/date-helper";
 
 export default function NoteListItem(props) {
   /**

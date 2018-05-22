@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { updateNoteText } from "../actions/notes-actions";
-import NoteEditor from "../components/NoteEditor";
+import NoteEditor from "../components/note-editor/NoteEditor";
 import { withRouter } from "react-router";
 import { findNoteById } from "../helper/notes-helper";
 

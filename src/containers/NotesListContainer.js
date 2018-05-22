@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import NotesList from "../components/NotesList";
+import NotesList from "../components/notes-list/NotesList";
 import { withRouter } from "react-router";
 
 function NotesListContainer(props) {
