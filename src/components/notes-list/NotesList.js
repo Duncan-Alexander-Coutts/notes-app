@@ -6,7 +6,7 @@ import { sortByDateDescending } from "../../helper/notes-helper";
 
 export default function NotesList(props) {
   return (
-    <List selection animated size="huge" divided relaxed>
+    <List selection animated size="huge" divided relaxed className="notes-list">
       {sortByDateDescending(props.notes).map(note => {
         return (
           <NoteListItem

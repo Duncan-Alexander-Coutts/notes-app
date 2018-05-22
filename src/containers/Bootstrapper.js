@@ -30,7 +30,9 @@ class Bootstrapper extends React.Component {
   render() {
     //If no note is selected via the url, redirect to the
     //latest edited note, otherwise do nothing
-    return this.props.location.pathname === "/" ? (
+    console.log("bootstrapping", this.props.notes.items);
+    return this.props.location.pathname === "/" &&
+      this.props.notes.items.length > 0 ? (
       <Redirect to={`/${this.getLastestNoteId()}`} />
     ) : null;
   }

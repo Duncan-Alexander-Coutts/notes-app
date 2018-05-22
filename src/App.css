@@ -20,7 +20,7 @@ body,
   text-align: center;
 }
 
-.notes-list,
+.notes-list-container,
 .selected-note {
   height: 100%;
   padding-left: 8px;

@@ -19,7 +19,7 @@ class App extends Component {
       <Router>
         <div className="app">
           <Bootstrapper />
-          <div className="notes-list">
+          <div className="notes-list-container">
             <div className="button-container">
               <Button
                 icon

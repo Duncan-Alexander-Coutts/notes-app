@@ -16,7 +16,7 @@ const notesReducer = (state = { items: [], idSequence: 0 }, action) => {
       return {
         ...state,
         idSequence: nextId,
-        items: getAddNewNoteState(state.items, action.id)
+        items: getAddNewNoteState(state.items, nextId)
       };
     case UPDATE_NOTE_TEXT:
       return {
