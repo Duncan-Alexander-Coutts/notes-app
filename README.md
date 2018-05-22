@@ -30,6 +30,10 @@ In order for this to feel more like a working app, I have leveraged the browser'
 
 NOTE if there any issues, it may be required to flush out your browser's local storage.
 
+### Semantic UI
+
+I have also used the semantic ui component library. This is a widely used component library which allows for consistency.
+
 ### Todo
 
 1.  Ordinarily, I would have written unit tests and end-to-end automated tests, however, there was not time to do this.
