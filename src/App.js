@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Button, Icon } from "semantic-ui-react";
 import { connect } from "react-redux";
 import { addNote } from "./actions/notes-actions";
 import NotesListContainer from "./containers/NotesListContainer";
 import NoteEditorContainer from "./containers/NoteEditorContainer";
+import AddNoteButton from "./components/add-note-button/AddNoteButton";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Bootstrapper from "./containers/Bootstrapper";
 
@@ -14,22 +14,13 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.props);
     return (
       <Router>
         <div className="app">
           <Bootstrapper />
           <div className="notes-list-container">
             <div className="button-container">
-              <Button
-                icon
-                color="blue"
-                labelPosition="left"
-                onClick={this.addNote}
-              >
-                <Icon name="add" />
-                New Note
-              </Button>
+              <AddNoteButton onButtonClicked={this.addNote} />
             </div>
             <NotesListContainer />
           </div>
