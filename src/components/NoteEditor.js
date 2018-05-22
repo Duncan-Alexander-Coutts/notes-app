@@ -1,10 +1,10 @@
 import React from "react";
 import { Label, Form, TextArea } from "semantic-ui-react";
-import moment from "moment";
+import { formatToDateString, formatToTimeString } from "../helper/date-helper";
 
 export default class NoteEditor extends React.Component {
-  setTexAreaRef = input => {
-    this.noteInput = input;
+  setTextAreaRef = textArea => {
+    this.noteInput = textArea;
   };
 
   componentDidUpdate() {
@@ -13,14 +13,14 @@ export default class NoteEditor extends React.Component {
     }
   }
 
-  updateText = (event, element) => {
-    this.props.onNoteUpdated(this.props.note.id, element.value);
+  updateText = (event, textArea) => {
+    this.props.onNoteUpdated(this.props.note.id, textArea.value);
   };
 
   getDateTimeText() {
     const lastEditedDate = new Date(this.props.note.lastEdited);
-    const dateText = moment(lastEditedDate).format("D MMMM YYYY");
-    const timeText = moment(lastEditedDate).format("h:mm:ss a");
+    const dateText = formatToDateString(lastEditedDate);
+    const timeText = formatToTimeString(lastEditedDate);
 
     return `Last edited: ${dateText} at ${timeText}`;
   }
@@ -33,9 +33,8 @@ export default class NoteEditor extends React.Component {
         </header>
         <Form>
           <TextArea
-            ref={this.setTexAreaRef}
+            ref={this.setTextAreaRef}
             autoFocus
-            //onBlur={() => alert("dfsf")}
             className="note-content"
             placeholder="Enter note..."
             onChange={this.updateText}
@@ -49,7 +48,7 @@ export default class NoteEditor extends React.Component {
   render() {
     return (
       <div className="selected-note">
-        {!this.props.note ? null : this.renderInput()}
+        {this.props.note ? this.renderInput() : null}
       </div>
     );
   }
