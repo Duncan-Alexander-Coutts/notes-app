@@ -6,7 +6,7 @@
 * Clone this repository
 * Open terminal and cd into directory
 * run "npm install" command
-* run "yarn start" command
+* run "npm start" command
 
 If all above works the app should load automatically in your browser. If not the url is http://localhost:3000
 
