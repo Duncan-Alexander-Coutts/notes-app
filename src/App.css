@@ -1,0 +1,76 @@
+html {
+  height: 100%;
+  display: flex;
+}
+
+body,
+#root,
+.app {
+  display: flex;
+  flex-grow: 1;
+}
+
+.app {
+  height: 100%;
+  display: flex;
+  padding: 8px;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.notes-list,
+.selected-note {
+  height: 100%;
+  padding-left: 8px;
+}
+
+.notes-list {
+  flex-grow: 1;
+  overflow-x: hidden;
+  max-width: 300px;
+
+  border-right: 1px solid #dededf;
+}
+
+.notes-list .header {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.selected-note {
+  flex-grow: 4;
+  display: flex;
+  flex-direction: column;
+}
+
+.selected-note-content,
+.selected-note-content form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2px;
+}
+
+.selected-note header {
+  text-align: center;
+}
+
+.selected-note-content textarea {
+  flex: 1;
+}
+
+.selected-note .note {
+  flex-grow: 1;
+}
+
+/* specificity required to override semantic style */
+.ui.form textarea.note-content {
+  resize: none;
+  margin-top: 16px;
+  border: none;
+
+  font-size: 20px;
+}
